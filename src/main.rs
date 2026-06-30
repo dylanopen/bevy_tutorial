@@ -21,9 +21,7 @@ fn main() {
 
     app.add_systems(Update, say_hello);
 
-    app.add_systems(Startup, system_1);
-    app.add_systems(Startup, system_2);
-    app.add_systems(Startup, system_3);
+    app.add_systems(Startup, (system_1, system_2, system_3));
 
     app.run();
 }
